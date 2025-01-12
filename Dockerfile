@@ -11,3 +11,5 @@ WORKDIR /var/www/html
 
 RUN git clone https://github.com/rhymix/rhymix.git
 RUN cd rhymix && mkdir files && chmod 777 files
+
+CMD ["apache2ctl", "-D", "FOREGROUND"]
